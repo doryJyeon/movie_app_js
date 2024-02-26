@@ -1,3 +1,8 @@
+# Movie app
+OMDb API 사이트를 이용한 영화 검색 사이트
+> (OMDb)[https://www.omdbapi.com/]
+
+
 ## npm install
 // npm 시작
 npm init -y
