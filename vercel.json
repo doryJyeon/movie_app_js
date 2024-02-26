@@ -1,4 +1,4 @@
 {
-  "devCommad": "npm run dev",
-  "buildCommad": "npm run build"
+  "devCommand": "npm run dev",
+  "buildCommand": "npm run build"
 }
