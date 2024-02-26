@@ -90,6 +90,61 @@ body {
     transform: translateX(100%);
   }
 }
+header {
+  padding: 20px 40px;
+  background-color: rgba(14, 17, 27, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+header .logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3137254902);
+  text-decoration: none;
+}
+header .logo span {
+  color: #fdc000;
+}
+header nav ul {
+  display: flex;
+  gap: 14px;
+}
+header nav ul li a {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3137254902);
+  text-decoration: none;
+}
+header nav ul li a.active {
+  color: #fdc000;
+}
+header .user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1c212e;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  margin: auto;
+  transition: 0.3s;
+}
+header .user .user-img {
+  width: inherit;
+  height: inherit;
+  background-color: salmon;
+  border-radius: 50%;
+}
+header .user:hover {
+  transform: scale(1.2);
+}
+
 .headline {
   margin-bottom: 40px;
 }
