@@ -388,3 +388,53 @@ footer {
   color: $color-white-10;
   text-align: center;
 }
+
+
+// media size -----------------------------
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+
+  .the-movie {
+    gap: 30px;
+
+    .poster {
+      $width: 300px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+
+    .title {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  header {
+    padding: 14px 20px;
+
+    nav {
+      display: none;
+    }
+
+    .user {
+      right: 20px;
+    }
+  }
+
+  .headline h1 {
+    font-size: 60px;
+  }
+}
+

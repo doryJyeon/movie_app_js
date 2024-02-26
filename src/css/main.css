@@ -341,4 +341,39 @@ footer a:hover {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.062745098);
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+  .the-movie {
+    gap: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+  header {
+    padding: 14px 20px;
+  }
+  header nav {
+    display: none;
+  }
+  header .user {
+    right: 20px;
+  }
+  .headline h1 {
+    font-size: 60px;
+  }
 }/*# sourceMappingURL=main.css.map */
