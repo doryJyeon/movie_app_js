@@ -334,4 +334,11 @@ footer a:hover {
 }
 .about p a:hover {
   text-decoration: underline;
+}
+
+.not-found h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.062745098);
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
