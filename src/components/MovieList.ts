@@ -1,6 +1,6 @@
 import { Component } from "../core/core"
 import movieStore from "../store/movie"
-import MovieItem from "../components/MovieItem"
+import MovieItem from "./MovieItem"
 
 export default class MovieList extends Component {
   constructor() {
@@ -32,8 +32,9 @@ export default class MovieList extends Component {
     )
 
     const loderEl = this.el.querySelector(".loading-icon")
+    // loderEl 선언 시 as HTMLDivElement로 하는게 더 정확함.
     movieStore.state.loading
-      ? loderEl.classList.remove("hide")
-      : loderEl.classList.add("hide")
+      ? loderEl?.classList.remove("hide")
+      : loderEl?.classList.add("hide")
   }
 }
