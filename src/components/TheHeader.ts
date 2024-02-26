@@ -1,6 +1,16 @@
 import { Component } from "../core/core"
 
+interface State {
+  [key: string]: unknown
+  menus:{
+    name: string
+    href: string
+  }[]
+}
+
 export default class TheHeader extends Component {
+  // 초기화 데이터는 없지만 !로 할당한 것으로 인식시킴. 할당 단언
+  public state!: State
   constructor() {
     super({
       tagName: "header",

@@ -1,7 +1,15 @@
 import { Component } from "../core/core"
+import { SimpleMovie } from "../store/movie"
+
+interface Props {
+  [key: string]: unknown
+  movie: SimpleMovie
+}
 
 export default class MovieItem extends Component {
-  constructor(props) {
+  // 초기화 데이터는 없지만 !로 할당한 것으로 인식시킴.
+  public props!: Props
+  constructor(props: Props) {
     super({
       props,
       tagName: "a"
