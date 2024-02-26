@@ -308,4 +308,30 @@ footer a:hover {
   font-family: "Oswald", sans-serif;
   color: #fff;
   margin: 24px 0 6px;
+}
+
+.about .photo {
+  width: 230px;
+  height: 230px;
+  margin: 5ch auto 20px;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: salmon;
+}
+.about .name {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+.about p {
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.about p a {
+  color: #fdc000;
+  text-decoration: none;
+}
+.about p a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
