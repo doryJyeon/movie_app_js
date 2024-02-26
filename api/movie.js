@@ -12,5 +12,5 @@ export default async function handler(request, response) {
   const res = await fetch(url)
   const json = await res.json()
 
-  response.states(200).json(json)
+  response.status(200).json(json)
 }
