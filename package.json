@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "npm init -y\r npm i -g parcel -D",
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel ./index.html",
     "build": "parcel build ./index.html"
