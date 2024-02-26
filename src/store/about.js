@@ -2,7 +2,7 @@ import { Store } from "../core/core"
 
 export default new Store({
   photo: "",
-  name: "Jyeon / Bck JuYeon",
+  name: "Jyeon / Bak JuYeon",
   email: "doryJyeon@gmail.com",
   blog: "none",
   github: "https://github.com/doryJyeon",
