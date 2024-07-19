@@ -55,13 +55,13 @@ const store = new Store<State>({
   movie: {} as DetailedMovie,
   loading: false,
   message: "Search for the movie title!"
-}) 
+})
 
 export default store
 export const searchMovies = async (page: number) => {
   store.state.loading = true
   store.state.page = page
-  if(page === 1) {
+  if (page === 1) {
     store.state.movies = []
     store.state.message = ""
   }
@@ -74,7 +74,7 @@ export const searchMovies = async (page: number) => {
       })
     })
     const { Search, totalResults, Response, Error } = await res.json()
-    if(Response === "True") {
+    if (Response === "True") {
       store.state.movies = [
         ...store.state.movies,
         ...Search
@@ -84,7 +84,7 @@ export const searchMovies = async (page: number) => {
       store.state.message = Error
       store.state.pageMax = 1
     }
-  } catch(error) {
+  } catch (error) {
     console.log("search error : ", error)
   } finally {
     store.state.loading = false
@@ -94,12 +94,15 @@ export const getMovieDetails = async (id: string) => {
   try {
     const res = await fetch('/api/movie', {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         id
       })
     })
     store.state.movie = await res.json()
-  } catch(error) {
+  } catch (error) {
     console.log(`get movie details error : ${error}`)
   }
 }

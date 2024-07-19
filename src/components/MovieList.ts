@@ -20,7 +20,7 @@ export default class MovieList extends Component {
     this.el.innerHTML = /* html */`
       ${movieStore.state.message
         ? `<div class="message">${movieStore.state.message}</div>`
-        : '<div class="movies"></div>' }
+        : '<div class="movies"></div>'}
       <div class="loading-icon hide"></div>
     `
 
@@ -31,8 +31,7 @@ export default class MovieList extends Component {
       }).el)
     )
 
-    const loderEl = this.el.querySelector(".loading-icon")
-    // loderEl 선언 시 as HTMLDivElement로 하는게 더 정확함.
+    const loderEl = this.el.querySelector(".loading-icon") as HTMLDivElement
     movieStore.state.loading
       ? loderEl?.classList.remove("hide")
       : loderEl?.classList.add("hide")

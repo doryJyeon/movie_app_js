@@ -8,6 +8,5 @@ export default createRouter([
   { path: "#/", component: Home },
   { path: "#/movie", component: Movie },
   { path: "#/about", component: About },
-  // 못찾는 부분은 제일 마지막에
   { path: ".*", component: NotFound }
 ])
