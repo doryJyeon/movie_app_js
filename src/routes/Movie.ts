@@ -3,7 +3,7 @@ import movieStore, { getMovieDetails } from "../store/movie"
 
 export default class Movie extends Component {
   async render() {
-    if (!history.state?.id) {
+    if (!history.state.id) {
       alert("Movie ID is missing")
       return history.back()
     }
@@ -20,10 +20,15 @@ export default class Movie extends Component {
 
     await getMovieDetails(history.state.id)
     const { movie } = movieStore.state
-    const bigPoster = movie.Poster?.replace("SX300", "SX700")
+    console.log("movie store")
+    console.log(movie)
+    if (!movie) {
+      alert("Movie detail is undefined")
+      return history.back()
+    }
 
     this.el.innerHTML = /*html*/`
-      <div style="background-image: url(${bigPoster})" class="poster"></div>
+      <div style="background-image: url(${movie.Poster?.replace("SX300", "SX700")})" class="poster"></div>
       <div class="specs">
         <div class="title">${movie.Title}</div>
         <div class="labels">
