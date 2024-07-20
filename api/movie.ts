@@ -35,7 +35,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
 
     const json = await res.json()
     return response.status(200).json(json)
-  } catch {
-    return response.status(500).json({ error: "Internal Server Error" })
+  } catch (error) {
+    return response.status(500).json({ error: error })
   }
 }
