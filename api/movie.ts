@@ -24,7 +24,11 @@ export default async function handler(request: VercelRequest, response: VercelRe
 
   // node에서 js fetch 사용하기 위해 node-fetch@2버전 설치
   try {
-    const res = await fetch(url)
+    const res = await fetch(url, {
+      headers: {
+        Accept: "application/json"
+      }
+    })
     if (!res.ok) {
       return response.status(res.status).json({ error: 'Failed to fetch data from OMDB API' })
     }

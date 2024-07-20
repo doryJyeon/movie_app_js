@@ -20,9 +20,7 @@ export default class Movie extends Component {
 
     await getMovieDetails(history.state.id)
     const { movie } = movieStore.state
-    console.log("movie store")
-    console.log(movie)
-    if (!movie) {
+    if (!movie.Title) {
       alert("Movie detail is undefined")
       return history.back()
     }
