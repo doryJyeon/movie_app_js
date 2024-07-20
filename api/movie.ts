@@ -1,6 +1,9 @@
 import fetch from "node-fetch"
 // ts용 node-fatch 설치 필요. npm i -D @types/node-fetch
 import { VercelRequest, VercelResponse } from "@vercel/node"
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const { APIKEY } = process.env
 

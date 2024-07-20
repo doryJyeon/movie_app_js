@@ -3,6 +3,11 @@ import movieStore, { getMovieDetails } from "../store/movie"
 
 export default class Movie extends Component {
   async render() {
+    if (!history.state?.id) {
+      alert("Movie ID is missing")
+      return history.back()
+    }
+
     this.el.classList.add("container", "the-movie")
     this.el.innerHTML = /*html*/`
       <div class="poster skeleton"></div>

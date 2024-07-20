@@ -102,7 +102,8 @@ export const getMovieDetails = async (id: string) => {
       })
     })
     store.state.movie = await res.json()
+    console.log(`get movie details`, store.state.movie)
   } catch (error) {
-    console.log(`get movie details error : ${error}`)
+    console.log(`get movie details error : `, error)
   }
 }
