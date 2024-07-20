@@ -91,6 +91,10 @@ export const searchMovies = async (page: number) => {
   }
 }
 export const getMovieDetails = async (id: string) => {
+  if (!id) {
+    return console.log("Id is missing")
+  }
+
   try {
     const res = await fetch('/api/movie', {
       method: "POST",
