@@ -12,14 +12,14 @@ export default class MovieItem extends Component {
   constructor(props: Props) {
     super({
       props,
-      tagName: "a"
+      tagName: "span"
     })
   }
 
   render() {
     const { movie } = this.props
 
-    this.el.setAttribute("href", `#/movie?id=${movie.imdbID}`)
+    // this.el.setAttribute("href", `#/movie?id=${movie.imdbID}`)
     this.el.classList.add("movie")
     this.el.style.backgroundImage = `url(${movie.Poster})`
     this.el.innerHTML = /* html */`

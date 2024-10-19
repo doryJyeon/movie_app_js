@@ -5,7 +5,7 @@ export default class Headline extends Component {
     this.el.classList.add("headline")
     this.el.innerHTML = /* html */`
       <h1>
-        <span>OMDd API</span>
+        <span>OMDb API</span>
         THE OPEN <br>
         MOVIE DATABASE
       </h1>
