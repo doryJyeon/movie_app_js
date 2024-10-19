@@ -22,10 +22,12 @@ export default class Movie extends Component {
     const { movie } = movieStore.state
     if (!movie.Title) {
       alert("Movie detail is undefined")
-      return history.back()
+      // return history.back()
     }
 
     this.el.innerHTML = /*html*/`
+      <p>${movie}</p>
+
       <div style="background-image: url(${movie.Poster?.replace("SX300", "SX700")})" class="poster"></div>
       <div class="specs">
         <div class="title">${movie.Title}</div>
