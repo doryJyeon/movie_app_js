@@ -10,9 +10,9 @@ interface State {
 }
 export default new Store<State>({
   photo: "",
-  name: "Jyeon / Bak JuYeon",
+  name: "Park JuYeon",
   email: "doryJyeon@gmail.com",
-  blog: "https://parallel-minnow-024.notion.site/About-ME-16895eaa343d440daf65ce8ed1cbf347?pvs=4",
+  blog: "https://www.notion.so/Welcome-16895eaa343d440daf65ce8ed1cbf347?pvs=25",
   github: "https://github.com/doryJyeon",
   repository: "https://github.com/doryJyeon/movie_app_js"
 })
